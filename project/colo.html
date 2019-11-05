@@ -1,0 +1,154 @@
+<html>
+<head>
+	<title>game</title>
+</head>
+<style type="text/css">
+#container{
+	width: 1200px;
+	height: 500px;
+	background-color:#c70039;
+	padding: 75px;
+	margin: auto;
+}
+#tools{
+	width: 300px;
+	height: 500px;
+	padding: 20px;
+	background-color: #00ff80;
+	float: left;
+}
+#tool{
+	width: 300px;
+	height: 500px;
+	padding: 20px;
+	background-color: #00ff80;
+	
+	top:178px;
+	right: 153px;
+	position: absolute;
+}
+
+#back{
+	padding: 20px;
+	width: 400px;
+	height: 500px;
+	background-color: #581845;
+	float: left;
+	}
+button{
+    width: 260px;
+    height: 100px;
+    margin: 12px;
+	}
+	#ball{
+		height: 120px;
+		width: 120px;
+		background-color: white;
+		border-radius: 50%;
+	}
+	#ball1{
+		height: 120px;
+		width: 120px;
+		background-color: white;
+		border-radius: 50%;
+	}
+	#ball2{
+		height: 120px;
+		width: 120px;
+		background-color: white;
+		border-radius: 50%;
+	}
+	#cap{
+       background-color: orange;
+       font-family: sans-serif;
+	}
+	#cap a{
+		text-decoration: none;
+	}
+	#frist{
+		font-family: sans-serif;
+		font-size: 30px;
+		font-weight: 150px;
+	}
+
+
+</style>
+<body>
+	<marquee direction="right" behavior="alternate">
+			<marquee direction="right" behavior="alternate" >
+				<p id="frist"><u>WELCOME TO COLOR GAME</u></p>
+			</marquee></marquee>
+	<div id="container">
+<div id="tools">
+	<button onclick="changeRed()">RED</button>
+    <button onclick="changeBlue()">BLUE</button>
+    <button onclick="changeYellow()">YELLOW</button>
+    <button onclick="changeGreen()">GREEN</button>
+</div>
+<div id="back">
+	<marquee direction="left" behavior="alternate">
+			<marquee direction="up" behavior="alternate">
+		<p id="ball"></p>
+	</marquee></marquee>
+		<marquee direction="right" behavior="alternate">
+			<marquee direction="down" behavior="alternate">
+				<p id="ball1"></p>
+			</marquee></marquee>
+			<marquee direction="left" behavior="alternate">
+			<marquee direction="down" behavior="alternate">
+				<p id="ball2"></p>
+				</marquee></marquee>
+</div>
+</div>
+<div id="tool">
+	<button onclick="changeBrown()">BROWN</button>
+    <button onclick="changeOrange()">ORANGE</button>
+    <button onclick="changeWhite()">WHITE</button>
+    <button onclick="changeBlack()">BLACK</button>
+</div>
+<button id="cap"><a href="page.php">RETRUN</a></button>
+<script type="text/javascript">
+function changeRed(){
+	document.getElementById('ball').style.backgroundColor="red";
+		document.getElementById('ball1').style.backgroundColor="red";
+		document.getElementById('ball2').style.backgroundColor="red";
+}
+function changeBlue(){
+	document.getElementById('ball').style.backgroundColor="blue";
+		document.getElementById('ball1').style.backgroundColor="blue";
+		document.getElementById('ball2').style.backgroundColor="blue";
+}
+function changeYellow(){
+	document.getElementById('ball').style.backgroundColor="yellow";
+		document.getElementById('ball1').style.backgroundColor="yellow";
+		document.getElementById('ball2').style.backgroundColor="yellow";
+}
+function changeGreen(){
+	document.getElementById('ball').style.backgroundColor="green";
+		document.getElementById('ball1').style.backgroundColor="green";
+		document.getElementById('ball2').style.backgroundColor="green";
+}
+function changeBrown(){
+	document.getElementById('ball').style.backgroundColor="brown";
+		document.getElementById('ball1').style.backgroundColor="brown";
+		document.getElementById('ball2').style.backgroundColor="brown";
+}
+function changeOrange(){
+	document.getElementById('ball').style.backgroundColor="orange";
+		document.getElementById('ball1').style.backgroundColor="orange";
+		document.getElementById('ball2').style.backgroundColor="orange";
+}
+function changeWhite(){
+	document.getElementById('ball').style.backgroundColor="white";
+		document.getElementById('ball1').style.backgroundColor="white";
+		document.getElementById('ball2').style.backgroundColor="white";
+}
+
+function changeBlack(){
+	document.getElementById('ball').style.backgroundColor="black";
+		document.getElementById('ball1').style.backgroundColor="black";
+		document.getElementById('ball2').style.backgroundColor="black";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<html>
+<head>
+	<title>quize</title>
+	<style type="text/css">
+  body{
+   	font-family: sans-serif;
+   }
+#after{
+	visibility: hidden;
+  margin-left: 20px;
+  float: left;
+  padding: 10px 20px 10px 20px;
+  width: 400px;
+  font-size: 30px;
+  background: #ff5459;
+}
+#one{
+  margin-left: 10px;
+  background: #d2def2;
+  padding: 10px 20px 10px 20px;
+   width: 400px;
+   border-radius: 20px;
+   float: left;
+}
+input{
+  margin-bottom: 20px;
+}
+#box{
+  height: 25px;
+  font-size: 16px;
+  border-radius:5px;
+  border: none;
+  padding: 5px;
+}
+#button{
+  background: green;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  transition-duration: .5s;
+  margin-top: 15px;
+}
+#button:hover{
+  background: white;
+  border: 1px solid green;
+  cursor: pointer;
+}
+#bob{
+   padding: 10px;
+    margin: 60px;
+    background-color: orange;
+    position: absolute;
+    bottom: 105px;
+    left: 250px;
+    border-radius: 5px;
+}
+#bob:hover{
+  background: lightblue;
+  cursor:pointer;
+}
+a{
+  text-decoration: none;
+}
+
+	</style>
+</head>
+<body>
+  <marquee direction="right" behavior="alternate">
+      <marquee direction="down" behavior="alternate">
+<h1>Ths is Quiz Game</h1>
+  </marquee></marquee>
+<form id="one" name="quize">
+	<p>What is capital of Nepal ?</p>
+	<input type="text" id="box" name="question1"><br/>
+
+	<p>What is the name of Nepalese Prime Minister ?</p>
+	<input type="radio" name="question2" id-"two" value="Kp Oli">Kp Oli<br/>
+	<input type="radio" name="question2" id-"two" value="Modi">Modi<br/>
+
+	<p>Which Nepali flim is nominate in Oscar ? </p>
+	<input type="radio" name="question3" id-"three" value="Chakkapanja">Chakkapanja<br/>
+	<input type="radio" name="question3" id-"three" value="Jhola">Jhola<br/>
+
+	<input type="button" value="I'm finished" onclick="check();" id="button">
+  <button  id="bob"><a href="page.php">RETURN</a></button>
+</form>
+	<div id="after">
+		<p id="message"></p>
+  <p id="num"></p>
+  <img id="pic">
+	</div>
+   <script type="text/javascript">
+          function check(){
+              var question1=document.quize.question1.value;
+              var question2=document.quize.question2.value;
+              var question3=document.quize.question3.value;
+              var correct=0;
+              if(question1 == "Kathmandu" || question1=="kathmandu"){
+              	correct++;
+              }
+              if(question2 == "Kp Oli"){
+              	correct++;
+
+              }
+              if(question3 == "Jhola"){
+              	correct++;
+              }
+               var messages=["Great, job","That's just okey","You really need to do better"];
+               var pictures=["one.gif","three.gif","two.gif"];
+              var range;
+              if(correct<1){
+              	range=2;
+              }
+              if(correct>0 && correct<3){
+              	range=1;
+              }
+              if(correct>2){
+              	range=0;
+              }
+            document.getElementById("after").style.visibility="visible"; 
+            document.getElementById("message").innerHTML=messages[range];
+            document.getElementById("num").innerHTML="You got "+ correct +" correct."; 
+            document.getElementById("pic").src=pictures[range];  
+       
+          }
+
+   </script>
+   
+   
+</body>
+</html>
